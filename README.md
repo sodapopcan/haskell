@@ -15,3 +15,5 @@ Set a "nicer" prompt with `:set prompt "> "`
 `:r` to reload it
 
 `:let` to define a name
+
+`:t` to see the type of something

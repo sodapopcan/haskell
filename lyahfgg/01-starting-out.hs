@@ -59,3 +59,21 @@ doubleSmallNumber' x | x > 100 = x
 -- length, null, take, drop, reverse, maximum, minimum, sum, product, elem are
 --    all functions to use with lists... elem is like "in"
 --    4 `elem` [1,2,4,2,3] is True
+--
+-- Ranges have familiar syntax to ruby at the base level: [1..20]
+-- You can also specify a step by specifying the first two elems:
+--    [1,4..20] would be [1,4,7,10,13,16,19] (step 3)
+-- And it works with chars two, of course:
+--    ['a'..'d'] = "abcd"
+--    ['a','c'..'d'] = "acegikmo"
+--    ['Y'..'b'] = "YZ[\\]^_`ab" (obvs is stepping through ASCII)
+-- Watch out for floating points in ranges since they aren't precise. The author
+--    advises against their use at all in ranges
+-- Apparently ranges have different type defs than lists (which I found by
+--    typing `:t [0..2] and :t [0,1,2]` in the repl, but I don't know about
+--    types yet so...
+-- cycle and repeat create infinite lists so must be used with other functions
+--    take 10 (cycle [1,2,3]) = [1,2,3,1,2,3,1,2,3,1]
+--    take 10 (repeat 5) = [5,5,5,5,5,5,5,5,5,5]
+--    `replicate 10 5` will produce the same result as above
+-- Leaving the last elem off makes it infinite: [1..]
