@@ -37,3 +37,25 @@ doubleSmallNumber' x | x > 100 = x
 --    a strict (non lazy) version of a function, or a slightly modified verion
 --    of a function or variable (like `prime` in Pony lang, I guess)
 -- Functions that don't take params are called "definitions" or "names"
+--
+-- Lists are homogenous--they can only store data of the same type
+-- Lists of chars become strings (ie, ' vs " is like in C)
+--    ['a','n','d','r','e','w'] = "andrew"
+--    ie, Strings are Lists
+-- Append to lists with ++ ( [1,2,3,4] ++ [5,6,7,8] = [1,2,3,4,5,6,7,8] )
+-- When appending, Haskell has to walk through the entire list on the left hand
+--    side which is a problem with mammoth lists, not so much with small ones
+-- Predend is instantaneous: ( "A" : "NDREW" = "ANDREW" )
+-- 1:[2,3,4] is syntactic sugar for 1:2:3:4:[] (you can't do [1]:[2,3]
+-- Get an index from a list with !! ( [1,2,3] !! 1 = 2)
+-- Nested lists may be of different lengths but still not different types
+-- Lists can be compared with > < == >= <= starting from the heads and moving
+--    right.  They don't have to be of the same length.  I can't, off the top of
+--    my head, think of when to use this so I look forward to that.
+-- head and tail do what they do elixir (the first element as a single value,
+--    get the remaining elements as a list)
+-- last and init do the opposite of head and tail respectively
+-- Can't get the head of an empty list!  ERROR
+-- length, null, take, drop, reverse, maximum, minimum, sum, product, elem are
+--    all functions to use with lists... elem is like "in"
+--    4 `elem` [1,2,4,2,3] is True
