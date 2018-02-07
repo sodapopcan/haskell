@@ -77,3 +77,16 @@ doubleSmallNumber' x | x > 100 = x
 --    take 10 (repeat 5) = [5,5,5,5,5,5,5,5,5,5]
 --    `replicate 10 5` will produce the same result as above
 -- Leaving the last elem off makes it infinite: [1..]
+--
+-- Oh, list comprehensions
+-- There are similar to mathematical sets, which I never did a lot of
+-- [x * 2 | x <- [1..10]] is the same as `take 10 [2,4..]
+--    In ruby it would be (1..10).map { |x| x * 2 }
+-- You can add a condition (or predicate) with a comma:
+--    [x * 2 | x <- [1..10], x * 2 >= 12]
+--    In ruby: (1..10).reduce(0) { |a, x| a << x * 2 if x * 2 >= 12 }
+-- In Haskell speak this is called filtering
+-- You can have multiple filters and multiple lists
+--
+--
+-- Tuples types are tied to their size
