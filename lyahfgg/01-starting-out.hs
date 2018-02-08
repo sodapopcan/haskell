@@ -18,7 +18,7 @@
 --    div 50 10   --> 5
 --    50 `div` 10 --> 5
 --    That's pretty cool tho not comfortable with the choice of backticks yet
--- Function calls have the highest precedent!
+-- Function calls have the highest precedence!
 --    func1 1 + func2 2 is the same as (func1 1) + (func2 2)
 sayHi name = "Hi there, " ++ name
 -- I tried calling (applying) this function right after the declaration--it
@@ -33,10 +33,11 @@ doubleSmallNumber x = if x > 100
 -- Skipping added and learning about overloading or whatever Haskell calls it
 doubleSmallNumber' x | x > 100 = x
                      | otherwise = doubleMe x
--- ' can be used anywhere in a function name, usually used at the end to denote
---    a strict (non lazy) version of a function, or a slightly modified verion
---    of a function or variable (like `prime` in Pony lang, I guess)
--- Functions that don't take params are called "definitions" or "names"
+-- ' can be used anywhere in a function name (except at the beginning), usually
+--    used at the end to denote a strict (non lazy) version of a function, or
+--    a slightly modified verion of a function or variable (like `prime` in Pony
+--    lang, I guess) Functions that don't take params are called "definitions"
+--    or "names"
 --
 -- Lists are homogenous--they can only store data of the same type
 -- Lists of chars become strings (ie, ' vs " is like in C)
@@ -63,7 +64,7 @@ doubleSmallNumber' x | x > 100 = x
 -- Ranges have familiar syntax to ruby at the base level: [1..20]
 -- You can also specify a step by specifying the first two elems:
 --    [1,4..20] would be [1,4,7,10,13,16,19] (step 3)
--- And it works with chars two, of course:
+-- And it works with chars too, of course:
 --    ['a'..'d'] = "abcd"
 --    ['a','c'..'d'] = "acegikmo"
 --    ['Y'..'b'] = "YZ[\\]^_`ab" (obvs is stepping through ASCII)
