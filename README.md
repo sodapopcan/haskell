@@ -1,7 +1,8 @@
 Haskell
 =======
 
-Meh, I wanna learn Haskell.
+Meh, I wanna learn Haskell.  I'm pinning this repo and updating every day I work
+on it to try and keep myself honest.
 
 REPL
 ----
