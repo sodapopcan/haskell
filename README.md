@@ -13,7 +13,7 @@ Set a "nicer" prompt with `:set prompt "> "`
 
 `:l file` to load a file (no need for the `.hs` extension)
 
-`:r` to reload it
+`:r` to reload any files loaded with `:l`
 
 `:let` to define a name
 
@@ -22,6 +22,12 @@ Set a "nicer" prompt with `:set prompt "> "`
 
 Log
 ---
+
+### Feb 8, 2018
+Decided to keep going through LAYH good anyway, but going to be aware of the the
+points pointed out int
+[this](http://bitemyapp.com/posts/2014-12-31-functional-education.html) blog post.  I would like to at least finish the second chapter on types and maybe go on to the next chapter on functions.  Basically I might want to stop when it starts talking about foreign concepts?  Currying is not a foreign concept but mondois and monads are.  All I know is that they are a way of dealing with state
+
 
 ### Feb 6, 2018
 After re-watching a Chris Allan video I'd watched a couple of years ago and

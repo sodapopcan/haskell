@@ -112,3 +112,17 @@ aheadOfMyself a b =
 --    a 3  (this is 5 + 3 becuz of currying)
 --
 -- Tuples types are tied to their size
+-- Tuples are tuples!  I get tuples.  They are like python tuples...
+--    basically...  yes, stop thinking in terms of multi-paradigm languages
+--    I know I know.
+-- 
+
+-- Tuples are typed by how many memebers they have... so even tho (1) and (1,2)
+--    and (1,2,3) are abstractly tuples, they are not of the same type.  Haskell
+--    seems to treat 2-member tuples (t2, I believe) as special.  I assume this
+--    is how they deal with key/val pairs at a base level.  There are even
+--    functions the fst and snd that operate on on 2-element tuples.  It seems
+--    `zip` is an important functionn too and I've understood the uses before,
+--    but zip being available in ruby seems to cater to the functional crowd as
+--    I've tried and never actually needed zip in ruby ever.
+-- 
