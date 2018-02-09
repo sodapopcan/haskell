@@ -88,6 +88,27 @@ doubleSmallNumber' x | x > 100 = x
 --    In ruby: (1..10).reduce(0) { |a, x| a << x * 2 if x * 2 >= 12 }
 -- In Haskell speak this is called filtering
 -- You can have multiple filters and multiple lists
+-- When you have multiple lists, the comprehension will return a list
+--    of every combination of the lists.
+--    [(x,y) | x <- [1..3], y <- [1..3]] = [(1,1),(1,2),(1,3),(2,1),(2,2)...]
+--    you get the idea
+-- Why is this tho?
+--    [x | x <- [1..3], x <- [1..3]] = [1,2,3,1,2,3,1,2,3] !?!
+evenNumbersUntil n =
+  [x | x <- [0..n], x `mod` 2 == 0]
+
+-- I look forward to figuring out the super terse and elegant way to write this
+--    next one:
+combineTwoLists n m =
+  [(x, y) | x <- n, y <- m]
+-- I played with lists more in repl and didn't note it here.
 --
+-- I got ahead of myself too and got into currying which I already about now
+--    know better.
+aheadOfMyself a b =
+  a + b
+-- In the above function:
+--    a = aheadOfMyself 5  (returns a function)
+--    a 3  (this is 5 + 3 becuz of currying)
 --
 -- Tuples types are tied to their size
