@@ -23,6 +23,11 @@ Set a "nicer" prompt with `:set prompt "> "`
 Log
 ---
 
+### Feb 9, 2018
+Watched [this](https://www.youtube.com/watch?v=DebDaiYev2M) video.  Started on
+the types chapter, otherwise, just played around with list comprehensions on the
+repl.  Not a super productive session as I didn't have a lot of time.
+
 ### Feb 8, 2018
 Decided to keep going through LAYH good anyway, but going to be aware of the the
 points pointed out int
