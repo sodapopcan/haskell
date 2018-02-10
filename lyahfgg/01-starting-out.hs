@@ -10,6 +10,10 @@
 -- Everything is a function (no surprises there) and while it doesn't tell you
 --    how yet, there is a mechnism for defining infix functions
 --    (ie, "*" in "3 * 5)
+--    ...which I figured out when I thought about it for a sec:
+--    (%$%) a b = a + b
+--    1 %$% 2 is 3
+--    (%$%) 1 2 is 3
 -- Functions call and arguments are all space delimited: func arg1 arg2
 --    succ 9    --> 19
 --    min 8 2   --> 2
