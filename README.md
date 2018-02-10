@@ -31,7 +31,11 @@ repl.  Not a super productive session as I didn't have a lot of time.
 ### Feb 8, 2018
 Decided to keep going through LAYH good anyway, but going to be aware of the the
 points pointed out int
-[this](http://bitemyapp.com/posts/2014-12-31-functional-education.html) blog post.  I would like to at least finish the second chapter on types and maybe go on to the next chapter on functions.  Basically I might want to stop when it starts talking about foreign concepts?  Currying is not a foreign concept but mondois and monads are.  All I know is that they are a way of dealing with state
+[this](http://bitemyapp.com/posts/2014-12-31-functional-education.html) blog
+post.  I would like to at least finish the second chapter on types and maybe go
+on to the next chapter on functions.  Basically I might want to stop when it
+starts talking about foreign concepts?  Currying is not a foreign concept but
+mondois and monads are.  All I know is that they are a way of dealing with state
 
 
 ### Feb 6, 2018
