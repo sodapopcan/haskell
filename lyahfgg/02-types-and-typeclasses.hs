@@ -26,6 +26,8 @@ addThree x y z = x + y + z
 -- This means that while both a's must be of the same type (whatever that type
 --    may be:  1 == 1 or "fry" == "zoidberg" for example
 --    1 == "andrew" does not work
+--    This is because they have the same variable name and both must belong to
+--    the Eq type class
 -- (+) :: Num a => a -> a -> a means a can be of any Num type
 -- All types, except IO, are a member of Eq
 -- Functions with Eq are going to use == or /= somewhere in their definition
@@ -46,3 +48,8 @@ compareThing a b =
 --    expression.  If you want to use read by itself, you need to say what type
 --    you want: read "1" :: Int is 1
 --    read "[1,2,3,4]" ++ [5,6] becomes [1,2,3,4,5,6]
+--
+-- The following doesn't work and I don't yet get why since a String is a part
+--    of the Ord type class, meh
+-- f :: (Num a, Ord b) => a -> b
+-- f x = "Hello"

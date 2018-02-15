@@ -19,9 +19,24 @@ Set a "nicer" prompt with `:set prompt "> "`
 
 `:t` to see the type of something
 
+`:i` for info on a type
+
 
 Log
 ---
+
+### Feb 15, 2018
+
+Been sick and watching a lot of videos.  I've been spending probably too much
+time on types over the past few days.  I've watched the [Chris
+Allen](https://www.youtube.com/watch?v=p-NBJm0kIYU&t=43s) one twice now and
+understanding better and better.  On the topic of LYAH might not be the best
+book to begin with, I watched
+[this video](https://www.youtube.com/watch?v=02_H3LjqMr8) which moves at
+a lightening pace but after the work I've put in so far, it clarified a bunch of
+stuff.  I have yet to get a focused stretch of time to power through some
+more chapters of LYAH... I've been spending a lot of time really grokking
+(ugh, I hate that word) concepts before moving on.
 
 ### Feb 11, 2018
 
@@ -46,7 +61,7 @@ repl.  Not a super productive session as I didn't have a lot of time.
 
 ## Feb 8, 2018
 
-ecided to keep going through LAYH good anyway, but going to be aware of the the
+Decided to keep going through LAYH good anyway, but going to be aware of the the
 points pointed out int
 [this](http://bitemyapp.com/posts/2014-12-31-functional-education.html) blog
 post.  I would like to at least finish the second chapter on types and maybe go
@@ -57,7 +72,7 @@ mondois and monads are.  All I know is that they are a way of dealing with state
 
 ### Feb 6, 2018
 
-fter re-watching a Chris Allan video I'd watched a couple of years ago and
+fter re-watching a Chris Allen video I'd watched a couple of years ago and
 reading some of his stuff, I found out that he doesn't recommend LYAH for
 reasons that seem legit.  I started to read through the cis194 class.  I also
 learned I shouldn't use haskell platform and instead use stack.  I think
