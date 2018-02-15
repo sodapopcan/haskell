@@ -55,14 +55,14 @@ going to work through LYAH then move onto Chris Allen's book.
 At the same time, I find myself constantly looking elsewhere as I read for
 clarification.  This hasn't actually bothered me too much, though.
 
-## Feb 9, 2018
+### Feb 9, 2018
 
 Watched [this](https://www.youtube.com/watch?v=DebDaiYev2M) video.  Started on
 the types chapter, otherwise, just played around with list comprehensions on the
 repl.  Not a super productive session as I didn't have a lot of time.
 
 
-## Feb 8, 2018
+### Feb 8, 2018
 
 Decided to keep going through LAYH good anyway, but going to be aware of the the
 points pointed out int
@@ -83,7 +83,7 @@ homebrew just installs stack when you `brew install haskell-platform` anyway...
 I'll have to check on that.
 
 
-## Feb 5, 2018
+### Feb 5, 2018
 
 tarted pretty late and made it mostly through list comprehensions in the
 Starting Out chapter of LYAH.
