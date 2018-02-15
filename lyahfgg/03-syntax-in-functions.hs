@@ -39,3 +39,37 @@ getHeadAndTail (h:t) = (h,t)
 -- From the book, here is pattern matching in a list comprehension:
 squishTuples :: (Num a) => [(a,a)] -> [a]
 squishTuples l = [ a + b | (a, b) <- l]
+-- Oh yeah, you can also bind against any number of elements if you keep using
+--    the : operator:
+getFirstAndSecondAndRest :: (Num a) => [a] -> (a, a, [a])
+getFirstAndSecondAndRest (h1:h2:t) = (h1, h2, t)
+-- This example from the book tells us what *some* of the elements of a list
+--    are:
+tell :: (Show a) => [a] -> String
+tell [] = "List is empty, brah"
+tell (x:[]) = "List has only one element, brah.  C'mon, brah.  I want more than just a " ++ show x
+tell (x:y:_) = "Ok, now you got two things, " ++ show x ++ " and " ++ show y ++ ".  Now we're getting somewhere, brah.  Yea brah!"
+-- So I don't fully understand bracket use yet, but list syntax is actually
+--    syntactic sugar.  So (1:[]) is the same as [1] (and actually, on the repl
+--    at least, you don't need the bracket).
+-- Here's a re-implementation of the length function with pattern matching and
+--    recursion;
+length' :: (Num b) => [a] -> b
+length' [] = 0
+length' (_:xs) = 1 + length' xs
+-- So this is saying "If an empty list, then return 0.  Without an empty list,
+--    disgard the first element and return the length' of the list + 1.
+--    This is essentially the same as replacing every element in an array with
+--    1 and summing the array.  Oh, here is that implementation!:
+lengthAgain :: (Num b) => [a] -> b
+lengthAgain x = sum $ map (\_ -> 1) x
+-- It doesn't even need pattern matching!
+-- Oh yeah, I read ahead an `$` is a way of binding tighter, later.  IE, it gets
+--    rid of parens:  `sum (map (+1) [1])` is the same as `sum $ map (+1) [1]`
+-- Here is the book's example of a reimplementation of sum:
+sum' :: (Num a) => [a] -> a
+sum' [] = 0
+sum' (x:xs) = x + sum' xs
+-- It's the same idea as length'.  If we get an empty list, just say `0`,
+--    otherwise we patten match on the head and the tail we are passed, then we
+--    add the head to result of the recursive call.
