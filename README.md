@@ -4,6 +4,9 @@ Haskell
 These are my scatter brain notes while I teach myself Haskell.  I'm pinning this
 repo and updating every day I work on it to try and keep myself honest.
 
+I keep a log right in this README and also check the wiki for sources and notes
+on them.
+
 REPL
 ----
 
