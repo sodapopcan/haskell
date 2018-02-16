@@ -73,3 +73,18 @@ sum' (x:xs) = x + sum' xs
 -- It's the same idea as length'.  If we get an empty list, just say `0`,
 --    otherwise we patten match on the head and the tail we are passed, then we
 --    add the head to result of the recursive call.
+--
+-- Ok, so "as patterns" are kinda blowing my mind
+-- So far, I never realized that this was a thing:
+--    x:y:z = [1,2,3]
+--    Ok, so I knew about that and then x = 1, y = 2, and z = 3
+--    BUT, I didn't realize that x:y:z is a valid "identifier" (probably the
+--    wrong thing to call it).  If you type this out `x:y:z` in the repl, it
+--    will return [1,2,3]!!!!
+-- SOOOO you can use the "all patterns" syntax--which is @--in pattern matching
+--    to get an easy reference to the original thing:
+printTheFirstLetter :: String -> String
+printTheFirstLetter str@(h:t) =
+  "So you gave me '" ++ str ++ ".' "
+  ++ " The first letter is " ++ [h]
+  ++ " and the rest is " ++ t
