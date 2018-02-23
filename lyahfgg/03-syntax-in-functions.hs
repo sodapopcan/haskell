@@ -88,3 +88,44 @@ printTheFirstLetter str@(h:t) =
   "So you gave me '" ++ str ++ ".' "
   ++ " The first letter is " ++ [h]
   ++ " and the rest is " ++ t
+-- Ok, maybe not so mindblowing, it's just a nice little piece of syntax
+-- It also explains that `++' can't be used in pattern matching which, yeah,
+--    I would have never thought you could...
+--
+-- Guards
+--
+-- I skipped ahead earlier and already learned about guards but may as well
+--    learn more (duh).
+schoolin :: (Integral a) => a -> String
+schoolin x
+  | x `elem` [00..06] = "Kindergarden"
+  | x `elem` [06..11] = "Primary School"
+  | x `elem` [12..14] = "Middle School"
+  | x `elem` [15..18] = "High School"
+  | otherwise = "Go to college or whatever"
+-- I more than likely have those ages wrong.  This is a contrived example too
+--    since this same thing could be done with pattern matching.
+-- Otherwise on its own?
+alwaysTrue :: Bool -> Bool
+alwaysTrue x
+  | x == False = True
+  | otherwise = True
+-- Implementation of compare:
+compare' :: (Ord a) => a -> a -> Ordering
+x `compare'` y
+  | x > y = GT
+  | x == y = EQ
+  | otherwise = LT
+-- Look!  You can also define functions with infix syntax!  Ooooo!
+--
+-- Usin' Where:
+--
+schoolin' x
+  | ageIn 00 06 = "Kindergarden"
+  | ageIn 06 11 = "Primary School"
+  | ageIn 12 14 = "Middle School"
+  | ageIn 15 18 = "High School"
+  | otherwise = "Go to college or whatever"
+  where
+    ageIn a b = x `elem` [a .. b]
+
