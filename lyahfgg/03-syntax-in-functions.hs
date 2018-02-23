@@ -129,3 +129,24 @@ schoolin' x
   where
     ageIn a b = x `elem` [a .. b]
 
+-- As suggested, this is a contrived way to show that pattern matching works in
+--    where.
+something :: String -> String -> String
+something firstName lastName =
+  [f] ++ ". " ++ [l] ++ "."
+  where (f:_) = firstName
+        (l:_) = lastName
+
+-- Coulda used head, of course...
+something' :: String -> String -> String
+something' firstName lastName =
+  [f] ++ ". " ++ [l] ++ "."
+  where f = head firstName
+        l = head lastName
+
+-- And as the book points out, this is a contrived example since it's shorter
+--    to just use pattern matching right in the function parameters:
+something'' :: String -> String -> String
+something'' (f:_) (l:_) =
+  [f] ++ ". " ++ [l] ++ "."
+-- ^ This also nicely shows that I can make meta-prime functions!
