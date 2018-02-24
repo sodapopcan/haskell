@@ -150,3 +150,51 @@ something'' :: String -> String -> String
 something'' (f:_) (l:_) =
   [f] ++ ". " ++ [l] ++ "."
 -- ^ This also nicely shows that I can make meta-prime functions!
+--
+-- let
+--
+-- lets are like wheres but are expressions:
+cylinder :: (RealFloat a) => a -> a -> a
+cylinder r h =
+  let sideArea = 2 * pi * r * h
+      topArea = pi * r ^ 2
+  in sideArea + (2 * topArea)
+-- Can be used to introduce locally scoped functions:
+square3 = let s x = x * x in [s 2, s 3, s 4]
+-- Can bind multiple variables inline with ; tho I don't see myself doing this
+--    much.  Last ; is optional:
+multiplySomeStuff =
+  let a = 1; b = 2; c = 3; in a * b * c
+-- pattern match:
+-- Here's a stupidly simple example:
+letExpr :: (Num a) => a
+letExpr = let a = 1 in a + 1
+patternMatchMultiplySomeStuff =
+  let (a,b,c) = (1,2,3) in a * b * c
+-- In list comprehensions:
+calcPairsGreaterThan8 :: (Num a, Ord a) => [(a, a)] -> [a]
+calcPairsGreaterThan8 xs =
+  [ l | (x, y) <- xs, let l = x + y, l > 8 ] 
+-- "in" isn't necessary here since it's visibility is predefined by the
+--    comprehension.
+--
+-- Case Expressions
+head' :: [a] -> a
+head' xs =
+  case xs of
+       [] -> error "No head' for empty list!"
+       (x:_) -> x
+
+tail' :: [a] -> [a]
+tail' xs =
+  case xs of
+       [] -> error "No tail' for empty list!"
+       (_:t) -> t
+
+describeList :: [a] -> String
+describeList xs =
+  "List is " ++ what xs ++ "."
+  where what [] = "empty"
+        what [_] = "a single valued"
+        what [_,_] = "two-valued"
+        what xs = "longer"
