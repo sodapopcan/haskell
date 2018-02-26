@@ -37,3 +37,16 @@ isUppercase = (`elem` ['A'..'Z'])
 -- Here is a version that takes a string or char
 isUpperString :: String -> Bool
 isUpperString x = (x !! 0) `elem` ['A'..'Z']
+
+-- This is a function that takes 1) a function that takes any type and 2) any
+-- type (that is the same as before) and returns return a value of that type.
+applyTwice :: (a -> a) -> a -> a
+applyTwice f x = f (f x)
+-- For example:
+--   applyTwice (+3) 2       => 8
+
+-- Here is an implementation of zipWith:
+zipWith' :: (a -> b -> c) -> [a] -> [b] -> [c]
+zipWith' _ [] _ = []
+zipWith' _ _ [] = []
+zipWith' f (x:xs) (y:ys) = f x y : zipWith' f xs ys
