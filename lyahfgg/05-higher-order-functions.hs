@@ -12,15 +12,15 @@
 --    (max 1) 2
 -- To partially apply (or curry) a function, all you have to do is not pass all
 -- the args.  For example:
---    alwaysCompareToTen = max 10
--- Now `alwaysCompareToOne` is a function that takes one arg
---    alwaysCompareToOne 12    => 12
---    alwaysCompareToOne 2     => 10
--- A realworld application for this would be, for example, a function that takes
--- a database connection and a query.  You could then create a new function by
--- partially applying just the database connection, then you can run repeated
--- queries to the same database without having to pass the connection each time.
-
+--    alwaysCompareWithTen = max 10
+-- Now `alwaysCompareWithTen` is a function that takes one arg
+--    alwaysCompareWithTen 12    => 12
+--    alwaysCompareWithTen 2     => 10
+-- A real-world application for this would be, for example, a function that
+-- takes a database connection and a query.  You could then create a new
+-- function by partially applying just the database connection, then you can run
+-- repeated queries to the same database without having to pass the connection
+-- each time.
 -- To partially apply an infix function, surround it with parens and provide an
 -- argument to only one side.
 --    divideByTwo = (/2)
