@@ -24,6 +24,10 @@ Set a "nicer" prompt with `:set prompt "> "`
 
 `:i` for info on a type
 
+`:m + <module> [<module> <module> ...]` to include a module or modules
+
+`:k` to see the kind of a type
+
 
 Log
 ---
