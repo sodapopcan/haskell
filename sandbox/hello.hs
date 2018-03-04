@@ -6,8 +6,7 @@ main = do
   name <- getLine
   case name of
        "\\q" ->
-         putStrLn "bye" >> 
-         return ()
+         putStrLn "bye"
        _ ->
          putStrLn ("Oh hi there, " ++ name) >> 
          main
