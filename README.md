@@ -28,6 +28,68 @@ Set a "nicer" prompt with `:set prompt "> "`
 Log
 ---
 
+### March 3, 2018
+
+I've obviously been horrible at keep up with this log. I've been a little
+preoccupied with trying to find a new job (my current employer knows I'm looking
+so no danger of writing that here) but also been doing plenty of Haskell-related
+things.  Working through LYAH gets kind of boring and I keep jumping ahead of
+myself, mostly to learn about all the concepts that everyone talks about and
+think are scary, namely: functors, monoids, and mondas (and applicatives but not
+quite there yet).
+
+I've watched a bunch of videos and particularly watched
+[this](https://www.youtube.com/watch?v=ZhuHCtR3xq8&t=3452s) and
+[this](https://www.youtube.com/watch?v=t1e8gqXLbsU)
+*many* times.  I'm pretty comfortable with the idea that functors are objects
+that can be mapped over, but it's important not to think of it like mapping over
+a (generic) array.  Of course, mapping over an array (list, in Haskell) is
+indeed a functor, other data types can be mapped over as well, like a tree.  The
+best way I started to understand functors is that they take a "wrapped" value or
+values, unwrap and perform operations on that/those value/s, and return an
+object of the same shape.  IE, if you take a tree and pass it to a functor
+(being a function), it will be returned as a tree of the same shape with all its
+values operated on.
+
+As for monoids, as stated in [Don't Fear the
+Monad](https://www.youtube.com/watch?v=ZhuHCtR3xq8&t=3452s), they a set of
+things that have rules for combining them and those rules obey some rules (they
+also have an identity or "zero" function).  `:info Monid` gives us this:
+
+``` haskell
+class Monoid a where
+    mempty :: a
+    mappend :: a -> a -> a
+    mconcat :: [a] -> a
+```
+
+So a monoid has an empty value, a way of appending.  It also has a method of
+concatanation which you generally get for free with the append method.  The
+append method must follow this rule:
+
+``` haskell
+(a `append` b) `append` c  ==  a `append` (b `append` c)
+```
+
+IE, it doesn't from which side you come from when appending.  Appending c to
+b first and then append that to a is no different than appending b to a and then
+c to the result of that.
+
+And then they must have a zero value which is a value that when appended won't
+change anything.  This is best illustrated in an example:
+
+Whole numbers are monoids and they may be so in two different ways.
+
+One way is for their append operation to be `+` (sum) making their empty value
+`0`.  Another way is for them to be appended with `*` (product/multiplication)
+which makes the empty value for that to be `1`.  The even more interesting
+example from the Don't Fear video is that a 12-hour clock is a monoid.  All the
+values can be combined to make a time and `12` is the empty value.  IE, if you
+add `12` to 12 o'clock, you get 12 o'clock!
+
+I'm starting to understand mondas as well but I won't get into that now.
+
+
 ### Feb 15, 2018
 
 Been sick and watching a lot of videos.  I've been spending probably too much
