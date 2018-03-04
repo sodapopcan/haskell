@@ -1,13 +1,17 @@
 import System.IO
+import Control.Monad
 
 main = do
   putStrLn "What's your name?"
   putStr "> "
   name <- getLine
-  case name of
-       "\\q" ->
-         putStrLn "bye" >>
-         return ()
-       _ ->
-         putStrLn ("Oh hi there, " ++ name) >> 
-         main
+  when (name /= "q") $ do
+    case name of
+      "?" ->
+        putStrLn "" >>
+        putStrLn "  q   Quit" >>
+        putStrLn "  ?   Help" >>
+        putStrLn ""
+      _ ->
+        putStrLn ("Oh hi there, " ++ name)
+    main
