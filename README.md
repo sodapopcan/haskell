@@ -32,6 +32,20 @@ Set a "nicer" prompt with `:set prompt "> "`
 Log
 ---
 
+### March 6, 2018
+
+Just read through the rest of LYAH without doing the doing exercises.  I'd
+skimmed through it before but it made little sense, of course.  This time
+I actually understood most things up until the end.  I'm going to power through
+the rest of the book (while recording the examples
+[here](https://github.com/sodapopcan/haskell/tree/master/lyahfgg)) and then move
+onto [Haskell Book](http://haskellbook.com/) ...whhhiiiich I've already started
+(just the first chapter about lambda calculus).
+
+I also cloned and built [this todo
+app](https://github.com/cpettitt/haskell-todo) which throws an error on macOS
+when trying to list tasks.  Going to look into that.
+
 ### March 3, 2018
 
 I've obviously been horrible at keep up with this log. I've been a little
