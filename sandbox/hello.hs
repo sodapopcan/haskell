@@ -7,10 +7,10 @@ main = do
   name <- getLine
   when (name /= "q") $ do
     case name of
-      "?" ->
-        putStrLn "" >>
-        putStrLn "  q   Quit" >>
-        putStrLn "  ?   Help" >>
+      "?" -> do
+        putStrLn ""
+        putStrLn "  q   Quit"
+        putStrLn "  ?   Help"
         putStrLn ""
       _ ->
         putStrLn ("Oh hi there, " ++ name)
