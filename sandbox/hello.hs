@@ -1,6 +1,8 @@
 import System.IO
 import Control.Monad
 
+import Convoluted (convolutedUpcase)
+
 main = do
   putStrLn "What's your name?"
   putStr "> "
@@ -13,5 +15,5 @@ main = do
         putStrLn "  ?   Help"
         putStrLn ""
       _ ->
-        putStrLn ("Oh hi there, " ++ name)
+        putStrLn ("Oh hi there, " ++ convolutedUpcase name ++ "!!!")
     main
