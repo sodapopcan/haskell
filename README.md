@@ -1,11 +1,12 @@
 Haskell
 =======
 
-These are my scatter brain notes while I teach myself Haskell.  I'm pinning this
-repo and updating every day I work on it to try and keep myself honest.
+These are my scatter brain notes while I teach myself Haskell.  In an effort to
+keep myself honest, I'm pinning this repo and updating it each day that I work
+on it.
 
-I keep a log right in this README and also check the wiki for sources and notes
-on them.
+I keep a log right in this README and also track sources and keep notes about them
+in the wiki.
 
 REPL
 ----
